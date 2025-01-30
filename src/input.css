@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: serif;
+  color: rgb(255, 0, 170);
+}
+
+body {
+  background: url("bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form {
+  text-align: center;
+}
+
+input {
+  margin-bottom: 10px;
+  color: black;
+}
+
+#fg {
+  backdrop-filter: blur(5px);
+}
+
+#form2 {
+  display: none;
+}
+
+.swal-title {
+  direction: rtl;
+}
+
+.swal-button {
+  direction: rtl;
+}
+.swal-button h1 {
+  color: white;
+  font-size: 20px;
+}
+
+.swal-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    background: url("bgjpg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 200%;
+  }
+
+  * {
+    color: rgb(255, 255, 255);
+  }
+}

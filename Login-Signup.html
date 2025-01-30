@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login&Signin</title>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="flex mt-24 flex-col text-center">
+      <button class="mx-auto mb-[18px] w-2/3">
+        <span id="lgi" class="text-gray-400 text-xl font-bold">Log-in</span>
+        <img
+          alt="Change"
+          id="btn"
+          class="inline-block mx-3 -mb-7 md:bg-transparent rounded-full bg-white"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAzNJREFUSEvFllmojlEUhp9DRCKSQpmVITJmyjyESMbImCJTlFyQ4caQ4Y4k4kKmQkJKLpAhmTLkgjIrc5kVyrTfv/Wdvn+f/Q2Oi7Pq9J++tfd+91p7rfddJVSQlVQQLv8KXBnoCTQBGtqlXwJPgcvA77yB5AVuDywCxgF1Eg5/BxwCtgJ3sy6QBVwf2AWMyDrI8x8B5ru/t0n70oBbAmeBRrb5F3AcuAncsL+fQDOgKzAEGAtUsvVPgEGAfstYErDeUIfXtR0PgInArYzI2wA7gD627g3QBXjh7wsBVweuAe1s8XZgMfA9Z7oV8SZgia1XhnoBP+L7Q8BbgIW2aBWwNiegv2wNsNI+6iJL04CVYqW1CnAMGFNOUG1TUCeBYZatpoBSXzA/4m3OOc/6sYX1539g08rVxj3D2egusCwErEvoRvWAAy7yKQHEzUCHwPf3wHTga8B3Ahjp/I8BBVMm4u4uLVfs+1Rgf+CQi0Bv7/sn13Z9XSvdSUjNAiMVuZWB+36qZwC7bbPe41kOYEXY31ov6Uk6x/yjXHspA0VvvMIq+A9Q1VWkyME3P2IBD3TMdj2lEMR+r8w/1/q8CFitsxoQsMRAv76dt7R+BmqZ8wsw2Ho/hJ8JPAcQWci0uLT0Y6ddcELQ1qLUr4pQRZkWeccY44022i2KeLj1nXAkCupB3w4aKajXZZNygM8Cdtr6TsBt/41FlR/tfaVIswPA1QLUOdm1yV7HTN9MKKTLcTvltHoo8No0vPCEPoEoSkUuXpXqREWRUjsFlwREw8BVb2E8zRIPFVfBfGDJ2Gnz7QOmZSGm+CUW50ypFGXrqIdDwPqmVPWwA5cD68sJviEmDHucLosnSi2kTs2dgKtfo5lqHaBWC7VX6E413Xgkap1pzkc2KKh+UoHllKCrZ8XbsjP2Pg8zoh9g7NfY1qmgNBzq/YssbfRRxEddW3WzHWIySaUKUJOIRpoaRiji6n7W4xHAJWBCUoFmDXuiTlGp5Ez/5zF1hIYAyWCIdgtnZAFHQBINXWA8UDsB/QNw2ECfZ90wL3B0TjTQ6yINrODU63pDSaom0Vz2r8C5Ds2zqMKA/wLJGJ8f2ST90gAAAABJRU5ErkJggg=="
+        />
+        <span id="su" class="text-gray-400 text-xl font-bold">Sign-up</span>
+      </button>
+      <div id="fg" class="rounded-md mx-3 md:mx-auto">
+        <div id="form1" class="space-y-10 p-2">
+          <h1 class="text-3xl my-10">LOG-IN</h1>
+          <form id="nb" class="flex flex-col">
+            <div class="relative mb-10">
+              <input
+                id="myinput1"
+                type="text"
+                class="p-3 text-pink-500 md:text-black bg-transparent border-b-2 border-e-2 w-full border-white md:min-w-96 focus:outline-none rounded-md"
+              />
+              <span id="email" class="absolute bottom-[22px] left-2"
+                >Email:</span
+              >
+              <i class="absolute right-2 bottom-[22px]"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAz9JREFUSEvFl02oVVUUx3//vW9SiCCWlEIoz8zAkYhiJAjR0AJxUKOoIEiCKKkoQYK+SCIsiiChIBoE2qwc1aCIPgiLvkishAYVSUUNyoju2f/evu/c57nnnY/rs3ANz17/9V9rr7XXWkecJ9F54uWsiG0HYCtFMYO0euS0/SMxngQ+kuRpA5mK2PYaUtoH7AYubjH+M/AaITwu6fs+BzqJbS8hpf3A/cCSPmPl+d/AY6UDRRumldj2KlJ6Hdg8JeGkmv0OMe6W9GsTvpHY9lpS+gC4bFGkZ0AnCWGbpF/qdhYQ215OSseAdedIOoZ/QgjbJf1VtbeQuCheAm7tIR0CJ0qdq4DYo39AMT7QSmx7Aykdh45nJh1B2jPOne1LsA9h7+ogP00IayXlyh/JRMQuikPA7R0G8rVtlTRRrWX1fwbk6NvkYcX40AJi25GUfgOWdYDvVIzPN527KPbOYp/qwJ5QjPOOzUdsewcpvd2ZK3unBoOjjcTD4U6k/PzaJYQrJX0zcdUeDm9GermnSO5RjE8vMuLcXm/QYDBy7kzERXEv8GQP8ZeEsElSrup5sT0gpa+A9T34uxXjM3XivhyNbR4mhDsk5XrA9krsF3qqeozdqxgP1q/6JqRXezweH+eI87O7oIyy7x3P4ewbNRgcniS2t5VtckruRaiFsEVS7oqVHOdZm9JPwMoWkyY3funorOfHsf8c6UlLkTZiX4+0vcOdHwjh8vHMrjeQ/Eb3NIA/JYRbJOUm0Sq2t5DSK8CGBqWDijHX0Zy/VQXbV5Qtc1D5fooQNraNtzqB7dWk9AWwonL2DyHMVBeEpiHxInBbBfQ7IVwn6eNpsmp7Mym9BSyv6D+rGO+q4pvG4gpS+rD2Jv8AHiWE5yTN5bYmtpeRUjb+4Gw/WFo5/pwQrpGUbcxL2yIwQ0rvA5fW7J9GehP7PeyvR+NQWoe0A/ta4KKa/nflInCq7mjX6pNz9QawaZorbriCd4lx11mtPmMjti8kpTzK7pti2I9hedl7hBCeqI/P3qtuyN96Usq5y8O+WjRV1XydRwjhwDmvtw0O5NZ4NUWxBmlVboLlQv8tcOw/X+gXleMe0FR/Ev8H8b+DujkuNwmMzAAAAABJRU5ErkJggg=="
+              /></i>
+            </div>
+            <div class="relative mb-2">
+              <input
+                id="myinput2"
+                type="password"
+                class="p-3 text-pink-500 md:text-black bg-transparent border-b-2 border-e-2 w-full border-white md:min-w-96 focus:outline-none rounded-md"
+              />
+              <span id="password" class="absolute bottom-[22px] left-2"
+                >Password:</span
+              >
+              <i id="show" class="absolute right-2 bottom-[20px]"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAsdJREFUSEvtlluIT3EQxz/f3FJyFyJE65UoSmGJiC23FyK02SgttUr2nTyodUm5R8rug2sK8eBWHjxISITk8iKXJB5EjDPbnO3scf57e0DZqa3d35mZ72++8535rfhLpr+ESyfwH2P+36fazPoBy4CxwABgYNDzHvgAPAFOSPrUFtpardjMJgKbgcVA11aSfgdOAdskPWzJtySwmfUHdgMrChK8A17F+QhgUM7HgCNAjaTPRRcoBDazPsB1YHwEfQOOAhf8PJ8s/KcDFcDqpOJuEXcLmCXpax78N2Az6wHcACaH8xlgnSSvslUzsyFxybnhfBmYJ+lnNrgIuAFYGk47JHl/m8zMegMbAe/9Bkkp5Vkfz3sAqIrDnZJqSgKb2RrgUDicBxZK8n41Wij7blLRyDjqWURj+HYBrgFTw9ervpTmaqrYzPoCLwGv6BkwoaCX24EtmZuXS/K2FFrQ/iBG7wUwJqU8C1wN7IkMcyRdyWczs9MxVumn18Ba4CrQS5LPczMzM5/9+jhcJem4/54F9r7tCodFks4VJPEEnqjI6iUtL4hZErPtn6ol7c0DO9VPgxavZJykj9lEZuZiOVgCuFKSj1yTmZlvt/uJ0IYmk/Em2Wxlkr40A/Y/zCxbtQuhIjsGZuaCuQlMyYH7zM/MCTEvripJh9O4ZuNkZt2B25nFUZcIbFOuCl8O65O+TgN8Nl25+yX9SP3MzPM6SGWcuQBnZC9WNMfDgDvA4Ag66wJqxwLx+GO+sSL+OTApL7xSK3NUQqeruiyCfWV6BRd9q6V9ylToe70cWJDoxAXmNLvdA2YXXbqlR8KfvjpgZYGY3sYj4a/V8MwTmbp6C/YBte16JHI99Z1dC8xvw7PozJxM/LZKelxC/Y3Hrb7HOTr9iRwdFTojbv6PgP88AhpKVZi/RJuBW7p9R751AneEtQ7F/H9U/wJtUOgfpMWr/gAAAABJRU5ErkJggg=="
+              /></i>
+            </div>
+            <div
+              class="flex flex-row justify-center space-x-3 md:space-x-6 md:mb-0 mb-[26.5px]"
+            >
+              <div>
+                <input id="check" type="checkbox" />
+                <label for="check">Remember me</label>
+              </div>
+              <a href="#">Forget password</a>
+            </div>
+          </form>
+          <button
+            id="log"
+            class="border-2 border-pink-800 text-white rounded-lg p-1 w-1/2 hover:bg-pink-800 bg-pink-600"
+          >
+            Log-in
+          </button>
+        </div>
+        <div id="form2" class="space-y-7 p-2">
+          <h1 class="text-3xl my-10">SIGN-UP</h1>
+          <form id="hghdgx" class="flex flex-col">
+            <div class="relative">
+              <input
+                id="myinput3"
+                type="text"
+                class="p-3 text-pink-500 md:text-black bg-transparent border-b-2 border-e-2 border-white md:min-w-96 w-full focus:outline-none rounded-md"
+              />
+              <span id="setEmail" class="absolute bottom-[22px] left-2"
+                >Email:</span
+              >
+              <i class="absolute right-2 bottom-[22px]"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAz9JREFUSEvFl02oVVUUx3//vW9SiCCWlEIoz8zAkYhiJAjR0AJxUKOoIEiCKKkoQYK+SCIsiiChIBoE2qwc1aCIPgiLvkishAYVSUUNyoju2f/evu/c57nnnY/rs3ANz17/9V9rr7XXWkecJ9F54uWsiG0HYCtFMYO0euS0/SMxngQ+kuRpA5mK2PYaUtoH7AYubjH+M/AaITwu6fs+BzqJbS8hpf3A/cCSPmPl+d/AY6UDRRumldj2KlJ6Hdg8JeGkmv0OMe6W9GsTvpHY9lpS+gC4bFGkZ0AnCWGbpF/qdhYQ215OSseAdedIOoZ/QgjbJf1VtbeQuCheAm7tIR0CJ0qdq4DYo39AMT7QSmx7Aykdh45nJh1B2jPOne1LsA9h7+ogP00IayXlyh/JRMQuikPA7R0G8rVtlTRRrWX1fwbk6NvkYcX40AJi25GUfgOWdYDvVIzPN527KPbOYp/qwJ5QjPOOzUdsewcpvd2ZK3unBoOjjcTD4U6k/PzaJYQrJX0zcdUeDm9GermnSO5RjE8vMuLcXm/QYDBy7kzERXEv8GQP8ZeEsElSrup5sT0gpa+A9T34uxXjM3XivhyNbR4mhDsk5XrA9krsF3qqeozdqxgP1q/6JqRXezweH+eI87O7oIyy7x3P4ewbNRgcniS2t5VtckruRaiFsEVS7oqVHOdZm9JPwMoWkyY3funorOfHsf8c6UlLkTZiX4+0vcOdHwjh8vHMrjeQ/Eb3NIA/JYRbJOUm0Sq2t5DSK8CGBqWDijHX0Zy/VQXbV5Qtc1D5fooQNraNtzqB7dWk9AWwonL2DyHMVBeEpiHxInBbBfQ7IVwn6eNpsmp7Mym9BSyv6D+rGO+q4pvG4gpS+rD2Jv8AHiWE5yTN5bYmtpeRUjb+4Gw/WFo5/pwQrpGUbcxL2yIwQ0rvA5fW7J9GehP7PeyvR+NQWoe0A/ta4KKa/nflInCq7mjX6pNz9QawaZorbriCd4lx11mtPmMjti8kpTzK7pti2I9hedl7hBCeqI/P3qtuyN96Usq5y8O+WjRV1XydRwjhwDmvtw0O5NZ4NUWxBmlVboLlQv8tcOw/X+gXleMe0FR/Ev8H8b+DujkuNwmMzAAAAABJRU5ErkJggg=="
+              /></i>
+            </div>
+            <div class="relative my-7">
+              <input
+                id="myinput4"
+                type="password"
+                class="p-3 text-pink-500 md:text-black bg-transparent border-b-2 border-e-2 border-white md:min-w-96 w-full focus:outline-none rounded-md"
+              />
+              <span id="setPassword" class="absolute bottom-[22px] left-2"
+                >Create password:</span
+              >
+              <i id="show2" class="absolute right-2 bottom-[20px]"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAsdJREFUSEvtlluIT3EQxz/f3FJyFyJE65UoSmGJiC23FyK02SgttUr2nTyodUm5R8rug2sK8eBWHjxISITk8iKXJB5EjDPbnO3scf57e0DZqa3d35mZ72++8535rfhLpr+ESyfwH2P+36fazPoBy4CxwABgYNDzHvgAPAFOSPrUFtpardjMJgKbgcVA11aSfgdOAdskPWzJtySwmfUHdgMrChK8A17F+QhgUM7HgCNAjaTPRRcoBDazPsB1YHwEfQOOAhf8PJ8s/KcDFcDqpOJuEXcLmCXpax78N2Az6wHcACaH8xlgnSSvslUzsyFxybnhfBmYJ+lnNrgIuAFYGk47JHl/m8zMegMbAe/9Bkkp5Vkfz3sAqIrDnZJqSgKb2RrgUDicBxZK8n41Wij7blLRyDjqWURj+HYBrgFTw9ervpTmaqrYzPoCLwGv6BkwoaCX24EtmZuXS/K2FFrQ/iBG7wUwJqU8C1wN7IkMcyRdyWczs9MxVumn18Ba4CrQS5LPczMzM5/9+jhcJem4/54F9r7tCodFks4VJPEEnqjI6iUtL4hZErPtn6ol7c0DO9VPgxavZJykj9lEZuZiOVgCuFKSj1yTmZlvt/uJ0IYmk/Em2Wxlkr40A/Y/zCxbtQuhIjsGZuaCuQlMyYH7zM/MCTEvripJh9O4ZuNkZt2B25nFUZcIbFOuCl8O65O+TgN8Nl25+yX9SP3MzPM6SGWcuQBnZC9WNMfDgDvA4Ag66wJqxwLx+GO+sSL+OTApL7xSK3NUQqeruiyCfWV6BRd9q6V9ylToe70cWJDoxAXmNLvdA2YXXbqlR8KfvjpgZYGY3sYj4a/V8MwTmbp6C/YBte16JHI99Z1dC8xvw7PozJxM/LZKelxC/Y3Hrb7HOTr9iRwdFTojbv6PgP88AhpKVZi/RJuBW7p9R751AneEtQ7F/H9U/wJtUOgfpMWr/gAAAABJRU5ErkJggg=="
+              /></i>
+            </div>
+            <div class="relative">
+              <input
+                id="myinput5"
+                type="password"
+                class="p-3 text-pink-500 md:text-black bg-transparent border-b-2 border-e-2 border-white md:min-w-96 w-full focus:outline-none rounded-md"
+              />
+              <span id="confirmPassword" class="absolute bottom-[22px] left-2"
+                >Confirm password:</span
+              >
+              <i class="absolute right-2 bottom-[22px]"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAApFJREFUSEvFlkuoTlEUx39/haS8IhlJlBQmiJD3q1uEke4tiZk8EkISSfLKc0RSN8WEgfJISmKCwRVFZEIYeOStG2E5S/ur4zj7O+c70V2Tr7PX2uu31rfWXnuLDhJ1EJfKYDNrAj5JulEl+IbAZtYZaE6Aa4ERAXgb2A+ckfSjbBClwGbWE1gOrAQGRJw/BQ4DxyR9LgqgLtjMBobslgLdi5wF/UfgOHBA0vPYnlywmY0GNgILgE4lgVmz70k5zgK7Jd3JKv8Am1k34BwwsyIstu0isFDS15pBFjwDuPKPoTV3kyVdj4GnAlf/E3icpFsx8Mikrncrgm8Cr4G5kf2DJD2Jgfslx+ZVBXAbMA34lvz63+nNmZafQFdJ3nC/5a+uNjMHewBZ8WPSI2f9HuD1e+86M9sE7MzY3Zc0PL2WB74A+DhMSzswERgPHEkpHibNOEHS2wBdkdHXTE9IWlYEXg/syYCbJZ0OzrckZ3s74NBJkryunqmP0X2RMrVIOlUEHhqcpu18Hs+S9CFA1gEnJb0M3xuAXRGo17VvbW+0xsHRY2BIxpFPn+mS3qXXzWxr8r0tAvXly5LmZPWxkbkKOJTj7D4wRdKbEOBewLOvJ02SLpUF++h8kcB753h85F0cgEXQNkmj8qKK3k5mltdkNR9+dHoVZOrq3GxdUQ/st5JPozElAHkmrcmkWhLbW3QfDwYeJAOhS4PwZ8AwSV8qgUMDLQZaGwD7sPEG9CMYlbJPn9VJTQ+WgPusni3pWpFtKXDIfAewuY5Df+jNl3S+CFq3ufI2m1lLeND1yej9uluUvm+L4KUzrjkys/7+kgTmhbWjwBpJXtvS0jA4FcBYoF2SX4sNS2Vww6TMhg4D/wJLJswf2lrYIQAAAABJRU5ErkJggg=="
+              /></i>
+            </div>
+          </form>
+          <button
+            class="border-2 mt-5 border-pink-800 text-white rounded-lg p-1 w-1/2 hover:bg-pink-800 bg-pink-600"
+          >
+            Sign-up
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "tailwindcss",
+            "type": "shell",
+            "command": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+            },
+
+        }
+    ]
+}
